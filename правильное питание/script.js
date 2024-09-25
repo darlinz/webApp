@@ -265,6 +265,12 @@ window.addEventListener('DOMContentLoaded', function(){
                     <div class="modal__title">${message}</div>
                 </div>
             `;
+            document.querySelector('.modal').append(thanksModal);
+            setTimeout(() => {
+                thanksModal.remove();
+                prevModalDialog.classList.add('show');
+                prevModalDialog.classList.remove('hide');
+                closeModal();
+            }, 4000);
         }
-
 });
